@@ -25,10 +25,6 @@ This section includes implementations of various algorithms, categorized by thei
 * Bogo Sort
 * Shell Sort
 * Counting Sort
-* Radix Sort
-* Heap Sort
-* Tim Sort (Often part of `std::sort` in practice)
-* IntroSort (Often `std::sort` implementation)
 
 ### Searching Algorithms
 
