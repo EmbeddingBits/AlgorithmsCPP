@@ -6,7 +6,6 @@ This repository serves as a comprehensive collection of **Data Structures and Al
 
 ## Table of Contents
 
-* [Data Structures](#data-structures)
 * [Algorithms](#algorithms)
 
 ---
