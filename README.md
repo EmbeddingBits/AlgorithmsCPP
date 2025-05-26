@@ -32,3 +32,7 @@ This section includes implementations of various algorithms, categorized by thei
 * Binary Search
 * Ternary Search
 * Interpolation Search
+
+### Conversion Algorithms
+* (Integer To Roman)[~/conversion_algos/int_to_roman.cpp]
+* Roman To Integer
