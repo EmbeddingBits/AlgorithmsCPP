@@ -38,3 +38,19 @@ This section includes implementations of various algorithms, categorized by thei
 
 ### Checksum
 * Luhn Validation (modulo 10)
+
+---
+
+## Contributing
+
+**Contributions are welcome and highly appreciated.** If you have an implementation of a data structure or an algorithm that is not yet present, or if you find an issue with an existing implementation, please feel free to contribute.
+
+To contribute:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Implement your changes, ensuring code quality and proper documentation.
+4.  Submit a pull request with a clear description of your changes.
+
+Please ensure your code is well-tested before creating a PR
+
