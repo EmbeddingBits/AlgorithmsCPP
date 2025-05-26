@@ -35,3 +35,6 @@ This section includes implementations of various algorithms, categorized by thei
 ### Conversion Algorithms
 * Integer To Roman
 * Roman To Integer
+
+### Checksum
+* Luhn Validation (modulo 10)
