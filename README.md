@@ -36,4 +36,3 @@ This section includes implementations of various algorithms, categorized by thei
 * Binary Search
 * Ternary Search
 * Interpolation Search
-* Jump Search
