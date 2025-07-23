@@ -6,7 +6,7 @@ int binarySearch(int arr[], int target, int n) {
       int high = n - 1;
 
       while(low <= high) {
-      int mid = low + (high - low) / 2;
+            int mid = low + (high - low) / 2;
             if (arr[mid] == target) {
                   return mid;
             }
@@ -36,12 +36,10 @@ int main() {
       int arr[] = {12, 23, 34, 45, 56, 67, 78, 90};
       int target = 56;
       int n = sizeof(arr) / sizeof(arr[0]);
-      
+
       bubbleSort(arr, n);
 
       int index = binarySearch(arr, target, n);
-
-
 
       if (index != -1) {
             cout << "The element " << target << " is found at index " << index;
