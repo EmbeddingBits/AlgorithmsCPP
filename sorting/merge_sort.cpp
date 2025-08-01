@@ -1,14 +1,8 @@
 #include <iostream> 
 #include <vector>   
-#include <algorithm>
 
-// merge combines two sorted integer vectors (left and right) into a single sorted vector.
-// It iterates through both vectors, comparing elements and appending the smaller one to the result.
-// It then appends any remaining elements from either vector.
 // Time Complexity: O(N + M), where N is left.size() and M is right.size().
 std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& right) {
-    // Create a new vector to store the merged result.
-    // Reserve capacity to avoid frequent reallocations.
     std::vector<int> result;
     result.reserve(left.size() + right.size());
 
@@ -17,7 +11,7 @@ std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& rig
 
     // Iterate while both vectors have elements to compare.
     while (i < left.size() && j < right.size()) {
-        if (left[i] <= right[j]) { // Use <= for stability (if equal, take from left first)
+        if (left[i] <= right[j]) { 
             result.push_back(left[i]);
             i++;
         } else {
@@ -39,23 +33,15 @@ std::vector<int> merge(const std::vector<int>& left, const std::vector<int>& rig
     return result;
 }
 
-// mergeSort sorts a vector of integers using the Merge Sort algorithm.
-// It's a recursive, "divide and conquer" algorithm.
 // Time Complexity: O(N log N)
-std::vector<int> mergeSort(std::vector<int> arr) { // arr is passed by value to allow slicing
-    // Base case: If the vector has 0 or 1 element, it's already sorted.
-    if (arr.size() <= 1) {
+std::vector<int> mergeSort(std::vector<int> arr) {
+    if (arr.size() <= 1) { // Base Case
         return arr;
     }
 
-    // 1. Divide: Find the middle point to split the vector into two halves.
+    // 1. Divide
     size_t mid = arr.size() / 2;
 
-    // Create left and right sub-vectors.
-    // In C++, creating sub-vectors typically involves iterators or copying.
-    // std::vector<int> left(arr.begin(), arr.begin() + mid);
-    // std::vector<int> right(arr.begin() + mid, arr.end());
-    // Or more succinctly using range constructor:
     std::vector<int> left;
     left.reserve(mid); // Pre-allocate for efficiency
     for (size_t k = 0; k < mid; ++k) {
@@ -69,11 +55,11 @@ std::vector<int> mergeSort(std::vector<int> arr) { // arr is passed by value to 
     }
 
 
-    // 2. Conquer: Recursively sort both halves.
+    // 2. Conquer:
     left = mergeSort(left);
     right = mergeSort(right);
 
-    // 3. Combine: Merge the two sorted halves back into a single sorted vector.
+    // 3. Combine
     return merge(left, right);
 }
 
